@@ -29,3 +29,6 @@
 *.exe
 *.out
 *.app
+main
+main.dSYM/
+sorting
