@@ -3,20 +3,13 @@
 
 #include <vector>
 
-void usage()
-{
-  std::cout << "Usage: sorting <algorithm>" << std::endl;
-  std::exit(EXIT_FAILURE);
-}
 
+void usage();
 
 template<typename T>
-void swap(std::vector<T>*& v, int a, int b)
-{
-  T aux = v[a];
+void swap(std::vector<T>& v, int a, int b);
 
-  v[a] = v[b];
-  v[b] = aux;
-}
+template<typename T>
+void v_print(const std::vector<T>& v);
 
 #endif
