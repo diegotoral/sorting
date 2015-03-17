@@ -2,6 +2,7 @@
 #include <cstdlib>
 
 #include "utils.h"
+#include "bubble-sort.h"
 #include "selection-sort.h"
 #include "insertion-sort.h"
 
@@ -27,6 +28,8 @@ int main(int argc, char **argv)
     SelectionSort::sort(v, compare);
   if(strcmp(argv[1], "insertion") == 0)
     InsertionSort::sort(v, compare);
+  if(strcmp(argv[1], "bubble") == 0)
+    BubbleSort::sort(v, compare);
   else
     std::cout << "algorithm not implemented!" << std::endl;
 
