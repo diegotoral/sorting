@@ -15,7 +15,10 @@ namespace InsertionSort {
       j = i;
 
       while(j > 0 && compare(&v[j - 1], &v[j]))
-        swap(v, j--, j);
+      {
+        swap(v, j, j - 1);
+        j--;
+      }
     }
   }
 }
