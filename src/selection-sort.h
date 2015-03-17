@@ -6,7 +6,7 @@
 
 namespace SelectionSort {
   template<typename T>
-  void sort(std::vector<T>*& v, bool (*compare) (T*, T*));
+  void sort(std::vector<T>& v, bool (*compare) (T*, T*));
 };
 
 #endif
