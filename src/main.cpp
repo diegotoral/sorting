@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstdlib>
+#include <cstring>
 
 #include "utils.h"
 #include "bubble-sort.h"
@@ -24,11 +24,11 @@ int main(int argc, char **argv)
   std::cout << "before sorting: ";
   v_print(v);
 
-  if(strcmp(argv[1], "selection") == 0)
+  if(std::strcmp(argv[1], "selection") == 0)
     SelectionSort::sort(v, compare);
-  else if(strcmp(argv[1], "insertion") == 0)
+  else if(std::strcmp(argv[1], "insertion") == 0)
     InsertionSort::sort(v, compare);
-  else if(strcmp(argv[1], "bubble") == 0)
+  else if(std::strcmp(argv[1], "bubble") == 0)
     BubbleSort::sort(v, compare);
   else
     std::cout << "algorithm not implemented!" << std::endl;

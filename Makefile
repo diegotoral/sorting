@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-Wall -c
+CFLAGS=-Wall -std=c++11 -c
 EXECUTABLE=sorting
 
 
