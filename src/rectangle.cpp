@@ -3,7 +3,7 @@
 
 Rectangle::Rectangle(int a, int b) : a(a), b(b) { }
 
-int Rectangle::area()
+int Rectangle::area() const
 {
   return this->a * this->b;
 }

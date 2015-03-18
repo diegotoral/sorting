@@ -5,7 +5,7 @@ class Rectangle {
   public:
     Rectangle(int a, int b);
 
-    int area();
+    int area() const;
 
     bool operator>(Rectangle* rect);
     bool operator<(Rectangle* rect);
