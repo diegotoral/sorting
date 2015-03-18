@@ -6,13 +6,16 @@ EXECUTABLE=sorting
 all: $(EXECUTABLE)
 
 sorting: main.o
-	$(CC) utils.o main.o selection-sort.o -o $(EXECUTABLE)
+	$(CC) utils.o rectangle.o main.o -o $(EXECUTABLE)
 
-main.o: utils.o src/main.cpp selection-sort.o quick-sort.o insertion-sort.o bubble-sort.o utils.o
+main.o: utils.o src/main.cpp rectangle.o selection-sort.o quick-sort.o insertion-sort.o bubble-sort.o utils.o
 	$(CC) $(CFLAGS) src/main.cpp
 
 utils.o: src/utils.h src/utils.cpp
 	$(CC) $(CFLAGS) src/utils.cpp
+
+rectangle.o: src/rectangle.h src/rectangle.cpp
+	$(CC) $(CFLAGS) src/rectangle.cpp
 
 selection-sort.o: src/selection-sort.h src/selection-sort.cpp utils.o
 	$(CC) $(CFLAGS) src/selection-sort.cpp
