@@ -3,6 +3,7 @@
 
 #include "utils.h"
 #include "bubble-sort.h"
+#include "quick-sort.h"
 #include "selection-sort.h"
 #include "insertion-sort.h"
 
@@ -30,6 +31,8 @@ int main(int argc, char **argv)
     InsertionSort::sort(v, compare);
   else if(std::strcmp(argv[1], "bubble") == 0)
     BubbleSort::sort(v, compare);
+  else if(std::strcmp(argv[1], "quicksort") == 0)
+    QuickSort::sort(v, compare);
   else
     std::cout << "algorithm not implemented!" << std::endl;
 
